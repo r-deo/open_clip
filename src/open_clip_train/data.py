@@ -15,6 +15,7 @@ import torch
 import torchvision.datasets as datasets
 import webdataset as wds
 from PIL import Image
+Image.MAX_IMAGE_PIXELS = None
 from torch.utils.data import Dataset, DataLoader, SubsetRandomSampler, IterableDataset, get_worker_info
 from torch.utils.data.distributed import DistributedSampler
 from webdataset.filters import _shuffle
@@ -29,7 +30,9 @@ except ImportError:
 class CsvDataset(Dataset):
     def __init__(self, input_filename, transforms, img_key, caption_key, sep="\t", tokenizer=None):
         logging.debug(f'Loading csv data from {input_filename}.')
-        df = pd.read_csv(input_filename, sep=sep)
+        df = pd.read_csv(input_filename, sep=sep, 
+                         nrows=5000
+                         )
 
         self.images = df[img_key].tolist()
         self.captions = df[caption_key].tolist()

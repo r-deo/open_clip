@@ -115,7 +115,7 @@ def train_one_epoch(model, data, loss, epoch, optimizer, scaler, scheduler, dist
             with torch.no_grad():
                 with autocast():
                     model_out = model(images, texts)
-
+                    # print(model_out)
                     for f in ("logit_scale", "logit_bias"):
                         model_out.pop(f, None)
 
@@ -310,12 +310,14 @@ def evaluate(model, data, epoch, args, tb_writer=None, tokenizer=None):
                         cumulative_gen_loss += gen_loss * batch_size
                         logging.info(
                             f"Generative Loss: {cumulative_gen_loss / num_samples:.6f}\t")
+            val_metrics = {}
+            # val_metrics = get_clip_metrics(
+            #     image_features=torch.cat(all_image_features),
+            #     text_features=torch.cat(all_text_features),
+            #     logit_scale=logit_scale.cpu(),
+            # )
+            # print(image_features.shape, image_features.get_device())
 
-            val_metrics = get_clip_metrics(
-                image_features=torch.cat(all_image_features),
-                text_features=torch.cat(all_text_features),
-                logit_scale=logit_scale.cpu(),
-            )
             loss = cumulative_loss / num_samples
             metrics.update(
                 {**val_metrics, "clip_val_loss": loss.item(), "epoch": epoch, "num_samples": num_samples}

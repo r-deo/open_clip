@@ -1,0 +1,429 @@
+W1129 10:56:34.421000 50634 torch/distributed/run.py:793] 
+W1129 10:56:34.421000 50634 torch/distributed/run.py:793] *****************************************
+W1129 10:56:34.421000 50634 torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W1129 10:56:34.421000 50634 torch/distributed/run.py:793] *****************************************
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:0.Process (global: 0, local 0), total 8.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:6.Process (global: 6, local 6), total 8.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:1.Process (global: 1, local 1), total 8.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:4.Process (global: 4, local 4), total 8.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:2.Process (global: 2, local 2), total 8.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:5.Process (global: 5, local 5), total 8.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:7.Process (global: 7, local 7), total 8.
+2024-11-29,10:56:41 | INFO | Running in distributed mode with multiple processes. Device: cuda:3.Process (global: 3, local 3), total 8.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+2024-11-29,10:56:41 | INFO | Loaded ViT-B-32 model config.
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+/home/ubuntu/geof/open_clip/src/open_clip/factory.py:380: UserWarning: These pretrained weights were trained with QuickGELU activation but the model config does not have that enabled. Consider using a model config with a "-quickgelu" suffix or enable with a flag.
+  warnings.warn(
+2024-11-29,10:56:43 | INFO | Loading pretrained ViT-B-32 weights (openai).
+2024-11-29,10:56:43 | INFO | Model:
+2024-11-29,10:56:43 | INFO | CLIP(
+  (visual): VisionTransformer(
+    (conv1): Conv2d(3, 768, kernel_size=(32, 32), stride=(32, 32), bias=False)
+    (patch_dropout): Identity()
+    (ln_pre): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+    (transformer): Transformer(
+      (resblocks): ModuleList(
+        (0-11): 12 x ResidualAttentionBlock(
+          (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (attn): MultiheadAttention(
+            (out_proj): NonDynamicallyQuantizableLinear(in_features=768, out_features=768, bias=True)
+          )
+          (ls_1): Identity()
+          (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+          (mlp): Sequential(
+            (c_fc): Linear(in_features=768, out_features=3072, bias=True)
+            (gelu): GELU(approximate='none')
+            (c_proj): Linear(in_features=3072, out_features=768, bias=True)
+          )
+          (ls_2): Identity()
+        )
+      )
+    )
+    (ln_post): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+  )
+  (transformer): Transformer(
+    (resblocks): ModuleList(
+      (0-11): 12 x ResidualAttentionBlock(
+        (ln_1): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=512, out_features=512, bias=True)
+        )
+        (ls_1): Identity()
+        (ln_2): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (mlp): Sequential(
+          (c_fc): Linear(in_features=512, out_features=2048, bias=True)
+          (gelu): GELU(approximate='none')
+          (c_proj): Linear(in_features=2048, out_features=512, bias=True)
+        )
+        (ls_2): Identity()
+      )
+    )
+  )
+  (token_embedding): Embedding(49408, 512)
+  (ln_final): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+)
+2024-11-29,10:56:43 | INFO | Params:
+2024-11-29,10:56:43 | INFO |   accum_freq: 10
+2024-11-29,10:56:43 | INFO |   aug_cfg: {}
+2024-11-29,10:56:43 | INFO |   batch_size: 288
+2024-11-29,10:56:43 | INFO |   beta1: 0.9
+2024-11-29,10:56:43 | INFO |   beta2: 0.98
+2024-11-29,10:56:43 | INFO |   cache_dir: None
+2024-11-29,10:56:43 | INFO |   checkpoint_path: /data/logs/2024_11_29-10_56_39-model_ViT-B-32-lr_1e-06-b_288-j_8-p_amp/checkpoints
+2024-11-29,10:56:43 | INFO |   coca_caption_loss_weight: 2.0
+2024-11-29,10:56:43 | INFO |   coca_contrastive_loss_weight: 1.0
+2024-11-29,10:56:43 | INFO |   copy_codebase: False
+2024-11-29,10:56:43 | INFO |   csv_caption_key: title
+2024-11-29,10:56:43 | INFO |   csv_img_key: filepath
+2024-11-29,10:56:43 | INFO |   csv_separator: 	
+2024-11-29,10:56:43 | INFO |   dataset_resampled: False
+2024-11-29,10:56:43 | INFO |   dataset_type: auto
+2024-11-29,10:56:43 | INFO |   ddp_static_graph: False
+2024-11-29,10:56:43 | INFO |   debug: False
+2024-11-29,10:56:43 | INFO |   delete_previous_checkpoint: False
+2024-11-29,10:56:43 | INFO |   device: cuda:0
+2024-11-29,10:56:43 | INFO |   dist_backend: None
+2024-11-29,10:56:43 | INFO |   dist_url: None
+2024-11-29,10:56:43 | INFO |   distill: False
+2024-11-29,10:56:43 | INFO |   distill_model: None
+2024-11-29,10:56:43 | INFO |   distill_pretrained: None
+2024-11-29,10:56:43 | INFO |   distributed: True
+2024-11-29,10:56:43 | INFO |   epochs: 10
+2024-11-29,10:56:43 | INFO |   epochs_cooldown: None
+2024-11-29,10:56:43 | INFO |   eps: 1e-06
+2024-11-29,10:56:43 | INFO |   force_custom_text: False
+2024-11-29,10:56:43 | INFO |   force_image_size: None
+2024-11-29,10:56:43 | INFO |   force_patch_dropout: None
+2024-11-29,10:56:43 | INFO |   force_quick_gelu: False
+2024-11-29,10:56:43 | INFO |   gather_with_grad: False
+2024-11-29,10:56:43 | INFO |   grad_checkpointing: False
+2024-11-29,10:56:43 | INFO |   grad_clip_norm: 50.0
+2024-11-29,10:56:43 | INFO |   horovod: False
+2024-11-29,10:56:43 | INFO |   image_interpolation: None
+2024-11-29,10:56:43 | INFO |   image_mean: None
+2024-11-29,10:56:43 | INFO |   image_resize_mode: None
+2024-11-29,10:56:43 | INFO |   image_std: None
+2024-11-29,10:56:43 | INFO |   imagenet_v2: None
+2024-11-29,10:56:43 | INFO |   imagenet_val: None
+2024-11-29,10:56:43 | INFO |   local_loss: False
+2024-11-29,10:56:43 | INFO |   local_rank: 0
+2024-11-29,10:56:43 | INFO |   lock_image: False
+2024-11-29,10:56:43 | INFO |   lock_image_freeze_bn_stats: False
+2024-11-29,10:56:43 | INFO |   lock_image_unlocked_groups: 0
+2024-11-29,10:56:43 | INFO |   lock_text: False
+2024-11-29,10:56:43 | INFO |   lock_text_freeze_layer_norm: False
+2024-11-29,10:56:43 | INFO |   lock_text_unlocked_layers: 0
+2024-11-29,10:56:43 | INFO |   log_every_n_steps: 5
+2024-11-29,10:56:43 | INFO |   log_level: 20
+2024-11-29,10:56:43 | INFO |   log_local: False
+2024-11-29,10:56:43 | INFO |   log_path: /data/logs/2024_11_29-10_56_39-model_ViT-B-32-lr_1e-06-b_288-j_8-p_amp/out.log
+2024-11-29,10:56:43 | INFO |   logs: /data/logs/
+2024-11-29,10:56:43 | INFO |   lr: 1e-06
+2024-11-29,10:56:43 | INFO |   lr_cooldown_end: 0.0
+2024-11-29,10:56:43 | INFO |   lr_cooldown_power: 1.0
+2024-11-29,10:56:43 | INFO |   lr_scheduler: cosine
+2024-11-29,10:56:43 | INFO |   model: ViT-B-32
+2024-11-29,10:56:43 | INFO |   momentum: None
+2024-11-29,10:56:43 | INFO |   name: 2024_11_29-10_56_39-model_ViT-B-32-lr_1e-06-b_288-j_8-p_amp
+2024-11-29,10:56:43 | INFO |   no_set_device_rank: False
+2024-11-29,10:56:43 | INFO |   opt: adamw
+2024-11-29,10:56:43 | INFO |   precision: amp
+2024-11-29,10:56:43 | INFO |   pretrained: openai
+2024-11-29,10:56:43 | INFO |   pretrained_image: False
+2024-11-29,10:56:43 | INFO |   rank: 0
+2024-11-29,10:56:43 | INFO |   remote_sync: None
+2024-11-29,10:56:43 | INFO |   remote_sync_frequency: 300
+2024-11-29,10:56:43 | INFO |   remote_sync_protocol: s3
+2024-11-29,10:56:43 | INFO |   report_to: tensorboard
+2024-11-29,10:56:43 | INFO |   resume: None
+2024-11-29,10:56:43 | INFO |   save_frequency: 1
+2024-11-29,10:56:43 | INFO |   save_most_recent: False
+2024-11-29,10:56:43 | INFO |   seed: 0
+2024-11-29,10:56:43 | INFO |   siglip: False
+2024-11-29,10:56:43 | INFO |   skip_scheduler: False
+2024-11-29,10:56:43 | INFO |   tensorboard: True
+2024-11-29,10:56:43 | INFO |   tensorboard_path: /data/logs/2024_11_29-10_56_39-model_ViT-B-32-lr_1e-06-b_288-j_8-p_amp/tensorboard
+2024-11-29,10:56:43 | INFO |   torchcompile: False
+2024-11-29,10:56:43 | INFO |   torchscript: False
+2024-11-29,10:56:43 | INFO |   trace: False
+2024-11-29,10:56:43 | INFO |   train_data: /home/ubuntu/geof/ITRA/pretrain/all_output_train.csv
+2024-11-29,10:56:43 | INFO |   train_data_upsampling_factors: None
+2024-11-29,10:56:43 | INFO |   train_num_samples: None
+2024-11-29,10:56:43 | INFO |   use_bn_sync: False
+2024-11-29,10:56:43 | INFO |   use_bnb_linear: None
+2024-11-29,10:56:43 | INFO |   val_data: /home/ubuntu/geof/ITRA/pretrain/all_output_val.csv
+2024-11-29,10:56:43 | INFO |   val_frequency: 1
+2024-11-29,10:56:43 | INFO |   val_num_samples: None
+2024-11-29,10:56:43 | INFO |   wandb: False
+2024-11-29,10:56:43 | INFO |   wandb_notes: 
+2024-11-29,10:56:43 | INFO |   wandb_project_name: open-clip
+2024-11-29,10:56:43 | INFO |   warmup: 2000
+2024-11-29,10:56:43 | INFO |   wd: 0.5
+2024-11-29,10:56:43 | INFO |   workers: 8
+2024-11-29,10:56:43 | INFO |   world_size: 8
+2024-11-29,10:56:43 | INFO |   zeroshot_frequency: 1
+2024-11-29,10:56:43 | INFO | Created AdamW (adamw) optimizer: lr: 1e-06, betas: (0.9, 0.98), eps: 1e-06, weight_decay: 0.5, amsgrad: False, foreach: None, maximize: False, capturable: False, differentiable: False, fused: None
+2024-11-29,10:57:15 | INFO | Start epoch 0
+[rank3]:I1129 10:57:31.022000 50715 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank4]:I1129 10:57:31.022000 50716 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank7]:I1129 10:57:31.022000 50719 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank2]:I1129 10:57:31.022000 50714 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank5]:I1129 10:57:31.022000 50717 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank6]:I1129 10:57:31.022000 50718 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank1]:I1129 10:57:31.022000 50713 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+[rank0]:I1129 10:57:31.022000 50712 torch/nn/parallel/distributed.py:1529] Reducer buckets have been rebuilt in this iteration.
+2024-11-29,10:57:36 | INFO | Train Epoch: 0 [  23040/4541320 (1%)] Data (t): 9.713 Batch (t): 20.833, 1105.94/s, 138.242/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0702 (7.0702) Loss: 7.0702 (7.0702)
+2024-11-29,10:58:10 | INFO | Train Epoch: 0 [ 138240/4541320 (3%)] Data (t): 0.654 Batch (t): 6.713, 3854.93/s, 481.866/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0846 (7.0774) Loss: 7.0846 (7.0774)
+2024-11-29,10:58:41 | INFO | Train Epoch: 0 [ 253440/4541320 (6%)] Data (t): 0.666 Batch (t): 6.293, 3702.12/s, 462.764/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0470 (7.0672) Loss: 7.0470 (7.0672)
+2024-11-29,10:59:11 | INFO | Train Epoch: 0 [ 368640/4541320 (8%)] Data (t): 0.665 Batch (t): 6.059, 3842.25/s, 480.281/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0750 (7.0692) Loss: 7.0750 (7.0692)
+2024-11-29,10:59:42 | INFO | Train Epoch: 0 [ 483840/4541320 (11%)] Data (t): 0.666 Batch (t): 6.039, 3785.51/s, 473.189/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0537 (7.0661) Loss: 7.0537 (7.0661)
+2024-11-29,11:00:15 | INFO | Train Epoch: 0 [ 599040/4541320 (13%)] Data (t): 0.663 Batch (t): 6.696, 3543.59/s, 442.949/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0940 (7.0707) Loss: 7.0940 (7.0707)
+2024-11-29,11:00:47 | INFO | Train Epoch: 0 [ 714240/4541320 (16%)] Data (t): 0.669 Batch (t): 6.348, 3825.89/s, 478.236/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0473 (7.0674) Loss: 7.0473 (7.0674)
+2024-11-29,11:01:18 | INFO | Train Epoch: 0 [ 829440/4541320 (18%)] Data (t): 0.717 Batch (t): 6.251, 3821.73/s, 477.716/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0544 (7.0658) Loss: 7.0544 (7.0658)
+2024-11-29,11:01:52 | INFO | Train Epoch: 0 [ 944640/4541320 (21%)] Data (t): 0.664 Batch (t): 6.675, 2698.53/s, 337.316/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0604 (7.0652) Loss: 7.0604 (7.0652)
+2024-11-29,11:02:26 | INFO | Train Epoch: 0 [1059840/4541320 (23%)] Data (t): 0.665 Batch (t): 6.941, 2201.86/s, 275.233/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.9979 (7.0584) Loss: 6.9979 (7.0584)
+2024-11-29,11:02:57 | INFO | Train Epoch: 0 [1175040/4541320 (26%)] Data (t): 0.657 Batch (t): 6.087, 3828.69/s, 478.586/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0469 (7.0574) Loss: 7.0469 (7.0574)
+2024-11-29,11:03:34 | INFO | Train Epoch: 0 [1290240/4541320 (28%)] Data (t): 0.666 Batch (t): 7.470, 3467.09/s, 433.387/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 7.0066 (7.0532) Loss: 7.0066 (7.0532)
+2024-11-29,11:04:08 | INFO | Train Epoch: 0 [1405440/4541320 (31%)] Data (t): 0.666 Batch (t): 6.821, 2646.38/s, 330.798/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.9977 (7.0489) Loss: 6.9977 (7.0489)
+2024-11-29,11:04:41 | INFO | Train Epoch: 0 [1520640/4541320 (34%)] Data (t): 0.663 Batch (t): 6.647, 3011.93/s, 376.491/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.9420 (7.0413) Loss: 6.9420 (7.0413)
+2024-11-29,11:05:13 | INFO | Train Epoch: 0 [1635840/4541320 (36%)] Data (t): 0.668 Batch (t): 6.353, 3822.63/s, 477.829/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.9236 (7.0334) Loss: 6.9236 (7.0334)
+2024-11-29,11:05:44 | INFO | Train Epoch: 0 [1751040/4541320 (39%)] Data (t): 0.670 Batch (t): 6.277, 3825.41/s, 478.177/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.9129 (7.0259) Loss: 6.9129 (7.0259)
+2024-11-29,11:06:19 | INFO | Train Epoch: 0 [1866240/4541320 (41%)] Data (t): 0.666 Batch (t): 6.950, 3710.60/s, 463.825/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.8971 (7.0183) Loss: 6.8971 (7.0183)
+2024-11-29,11:06:50 | INFO | Train Epoch: 0 [1981440/4541320 (44%)] Data (t): 0.666 Batch (t): 6.072, 3831.85/s, 478.981/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.8538 (7.0092) Loss: 6.8538 (7.0092)
+2024-11-29,11:07:21 | INFO | Train Epoch: 0 [2096640/4541320 (46%)] Data (t): 0.713 Batch (t): 6.303, 3818.88/s, 477.360/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.6607 (6.9908) Loss: 6.6607 (6.9908)
+2024-11-29,11:07:53 | INFO | Train Epoch: 0 [2211840/4541320 (49%)] Data (t): 0.668 Batch (t): 6.315, 3818.87/s, 477.358/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.6353 (6.9731) Loss: 6.6353 (6.9731)
+2024-11-29,11:08:24 | INFO | Train Epoch: 0 [2327040/4541320 (51%)] Data (t): 0.668 Batch (t): 6.245, 3821.37/s, 477.671/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.6319 (6.9568) Loss: 6.6319 (6.9568)
+2024-11-29,11:08:58 | INFO | Train Epoch: 0 [2442240/4541320 (54%)] Data (t): 0.670 Batch (t): 6.904, 2232.11/s, 279.014/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.6433 (6.9426) Loss: 6.6433 (6.9426)
+2024-11-29,11:09:29 | INFO | Train Epoch: 0 [2557440/4541320 (56%)] Data (t): 0.689 Batch (t): 6.077, 3819.54/s, 477.443/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.5596 (6.9259) Loss: 6.5596 (6.9259)
+2024-11-29,11:10:01 | INFO | Train Epoch: 0 [2672640/4541320 (59%)] Data (t): 0.669 Batch (t): 6.394, 3815.95/s, 476.994/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.5152 (6.9088) Loss: 6.5152 (6.9088)
+2024-11-29,11:10:34 | INFO | Train Epoch: 0 [2787840/4541320 (61%)] Data (t): 0.824 Batch (t): 6.696, 3819.78/s, 477.472/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.4912 (6.8921) Loss: 6.4912 (6.8921)
+2024-11-29,11:11:08 | INFO | Train Epoch: 0 [2903040/4541320 (64%)] Data (t): 0.667 Batch (t): 6.721, 3817.99/s, 477.249/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.3992 (6.8731) Loss: 6.3992 (6.8731)
+2024-11-29,11:11:40 | INFO | Train Epoch: 0 [3018240/4541320 (66%)] Data (t): 0.665 Batch (t): 6.405, 3826.87/s, 478.359/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.1792 (6.8474) Loss: 6.1792 (6.8474)
+2024-11-29,11:12:12 | INFO | Train Epoch: 0 [3133440/4541320 (69%)] Data (t): 0.668 Batch (t): 6.358, 3815.99/s, 476.999/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.1093 (6.8211) Loss: 6.1093 (6.8211)
+2024-11-29,11:12:42 | INFO | Train Epoch: 0 [3248640/4541320 (72%)] Data (t): 0.671 Batch (t): 6.038, 3819.31/s, 477.414/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.0492 (6.7944) Loss: 6.0492 (6.7944)
+2024-11-29,11:13:13 | INFO | Train Epoch: 0 [3363840/4541320 (74%)] Data (t): 0.669 Batch (t): 6.322, 3819.52/s, 477.440/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.0486 (6.7696) Loss: 6.0486 (6.7696)
+2024-11-29,11:13:45 | INFO | Train Epoch: 0 [3479040/4541320 (77%)] Data (t): 0.664 Batch (t): 6.250, 3748.15/s, 468.519/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 6.0276 (6.7457) Loss: 6.0276 (6.7457)
+2024-11-29,11:14:19 | INFO | Train Epoch: 0 [3594240/4541320 (79%)] Data (t): 0.668 Batch (t): 6.922, 3820.72/s, 477.590/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.9811 (6.7218) Loss: 5.9811 (6.7218)
+2024-11-29,11:14:54 | INFO | Train Epoch: 0 [3709440/4541320 (82%)] Data (t): 0.683 Batch (t): 6.970, 3267.78/s, 408.472/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.9574 (6.6986) Loss: 5.9574 (6.6986)
+2024-11-29,11:15:24 | INFO | Train Epoch: 0 [3824640/4541320 (84%)] Data (t): 0.669 Batch (t): 6.028, 3819.01/s, 477.376/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.9424 (6.6764) Loss: 5.9424 (6.6764)
+2024-11-29,11:15:57 | INFO | Train Epoch: 0 [3939840/4541320 (87%)] Data (t): 0.670 Batch (t): 6.509, 3022.59/s, 377.824/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.8878 (6.6538) Loss: 5.8878 (6.6538)
+2024-11-29,11:16:27 | INFO | Train Epoch: 0 [4055040/4541320 (89%)] Data (t): 0.669 Batch (t): 6.032, 3818.82/s, 477.353/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.8543 (6.6316) Loss: 5.8543 (6.6316)
+2024-11-29,11:17:02 | INFO | Train Epoch: 0 [4170240/4541320 (92%)] Data (t): 0.669 Batch (t): 7.055, 2753.34/s, 344.168/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.7780 (6.6085) Loss: 5.7780 (6.6085)
+2024-11-29,11:17:36 | INFO | Train Epoch: 0 [4285440/4541320 (94%)] Data (t): 0.667 Batch (t): 6.651, 3818.90/s, 477.363/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.7601 (6.5862) Loss: 5.7601 (6.5862)
+2024-11-29,11:18:07 | INFO | Train Epoch: 0 [4400640/4541320 (97%)] Data (t): 0.669 Batch (t): 6.211, 3819.10/s, 477.387/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.6761 (6.5629) Loss: 5.6761 (6.5629)
+2024-11-29,11:18:40 | INFO | Train Epoch: 0 [4515840/4541320 (99%)] Data (t): 0.774 Batch (t): 6.693, 3775.96/s, 471.994/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.6133 (6.5391) Loss: 5.6133 (6.5391)
+2024-11-29,11:18:46 | INFO | Train Epoch: 0 [4538880/4541320 (100%)] Data (t): 0.667 Batch (t): 6.022, 3825.78/s, 478.222/s/gpu LR: 0.000000 Logit Scale: 100.000 Contrastive_loss: 5.6537 (6.5175) Loss: 5.6537 (6.5175)
+2024-11-29,11:18:54 | INFO | Eval Epoch: 1 [288 / 241671]	Clip Loss: 3.487393	
+2024-11-29,11:19:42 | INFO | Eval Epoch: 1 [29088 / 241671]	Clip Loss: 3.484970	
+2024-11-29,11:20:23 | INFO | Eval Epoch: 1 [57888 / 241671]	Clip Loss: 3.367967	
+2024-11-29,11:21:04 | INFO | Eval Epoch: 1 [86688 / 241671]	Clip Loss: 3.331987	
+2024-11-29,11:21:37 | INFO | Eval Epoch: 1 [115488 / 241671]	Clip Loss: 3.195242	
+2024-11-29,11:22:07 | INFO | Eval Epoch: 1 [144288 / 241671]	Clip Loss: 2.978859	
+2024-11-29,11:22:33 | INFO | Eval Epoch: 1 [173088 / 241671]	Clip Loss: 2.809818	
+2024-11-29,11:23:14 | INFO | Eval Epoch: 1 [201888 / 241671]	Clip Loss: 2.733190	
+2024-11-29,11:23:39 | INFO | Eval Epoch: 1 [230688 / 241671]	Clip Loss: 2.636120	
+[rank7]:[E1129 11:28:56.579554341 ProcessGroupNCCL.cpp:616] [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600014 milliseconds before timing out.
+[rank7]:[E1129 11:28:56.579813589 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 7] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank1]:[E1129 11:28:58.340503822 ProcessGroupNCCL.cpp:616] [Rank 1] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600067 milliseconds before timing out.
+[rank1]:[E1129 11:28:58.340785430 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 1] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank6]:[E1129 11:29:00.760257445 ProcessGroupNCCL.cpp:616] [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600067 milliseconds before timing out.
+[rank6]:[E1129 11:29:00.760485146 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 6] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank4]:[E1129 11:29:00.935817033 ProcessGroupNCCL.cpp:616] [Rank 4] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600086 milliseconds before timing out.
+[rank4]:[E1129 11:29:00.936038232 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 4] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank2]:[E1129 11:29:01.843557178 ProcessGroupNCCL.cpp:616] [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+[rank2]:[E1129 11:29:01.843797932 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 2] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank5]:[E1129 11:29:01.002399639 ProcessGroupNCCL.cpp:616] [Rank 5] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45304, OpType=ALLREDUCE, NumelIn=262145, NumelOut=262145, Timeout(ms)=600000) ran for 600093 milliseconds before timing out.
+[rank5]:[E1129 11:29:01.002672212 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 5] Exception (either an error or timeout) detected by watchdog at work: 45304, last enqueued NCCL work: 45324, last completed NCCL work: 45303.
+[rank3]:[E1129 11:29:01.153720910 ProcessGroupNCCL.cpp:616] [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600017 milliseconds before timing out.
+[rank3]:[E1129 11:29:01.153949591 ProcessGroupNCCL.cpp:1785] [PG ID 0 PG GUID 0(default_pg) Rank 3] Exception (either an error or timeout) detected by watchdog at work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank3]:[E1129 11:29:02.015581486 ProcessGroupNCCL.cpp:1834] [PG ID 0 PG GUID 0(default_pg) Rank 3] Timeout at NCCL work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank3]:[E1129 11:29:02.015615988 ProcessGroupNCCL.cpp:630] [Rank 3] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank3]:[E1129 11:29:02.015625680 ProcessGroupNCCL.cpp:636] [Rank 3] To avoid data inconsistency, we are taking the entire process down.
+[rank7]:[E1129 11:29:02.016650494 ProcessGroupNCCL.cpp:1834] [PG ID 0 PG GUID 0(default_pg) Rank 7] Timeout at NCCL work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank7]:[E1129 11:29:02.016702479 ProcessGroupNCCL.cpp:630] [Rank 7] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank7]:[E1129 11:29:02.016714608 ProcessGroupNCCL.cpp:636] [Rank 7] To avoid data inconsistency, we are taking the entire process down.
+[rank3]:[E1129 11:29:02.017114369 ProcessGroupNCCL.cpp:1595] [PG ID 0 PG GUID 0(default_pg) Rank 3] Process group watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600017 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7838ce36c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x7838835cc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7838835d3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7838835d561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x7838cecfa5c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x7838d2a94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x7838d2b26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 3] Process group watchdog thread terminated with exception: [Rank 3] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600017 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7838ce36c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x7838835cc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7838835d3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7838835d561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x7838cecfa5c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x7838d2a94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x7838d2b26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1601 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7838ce36c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe4271b (0x78388324271b in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x145c0 (0x7838cecfa5c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #3: <unknown function> + 0x94ac3 (0x7838d2a94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126850 (0x7838d2b26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank7]:[E1129 11:29:02.018325511 ProcessGroupNCCL.cpp:1595] [PG ID 0 PG GUID 0(default_pg) Rank 7] Process group watchdog thread terminated with exception: [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600014 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7baf0fd6c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x7baec4fcc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7baec4fd3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7baec4fd561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x7baf107045c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x7baf14494ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x7baf14526850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 7] Process group watchdog thread terminated with exception: [Rank 7] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600014 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7baf0fd6c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x7baec4fcc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x7baec4fd3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x7baec4fd561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x7baf107045c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x7baf14494ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x7baf14526850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1601 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x7baf0fd6c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe4271b (0x7baec4c4271b in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x145c0 (0x7baf107045c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #3: <unknown function> + 0x94ac3 (0x7baf14494ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126850 (0x7baf14526850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank2]:[E1129 11:29:02.187366923 ProcessGroupNCCL.cpp:1834] [PG ID 0 PG GUID 0(default_pg) Rank 2] Timeout at NCCL work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank2]:[E1129 11:29:02.187424291 ProcessGroupNCCL.cpp:630] [Rank 2] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank2]:[E1129 11:29:02.187438095 ProcessGroupNCCL.cpp:636] [Rank 2] To avoid data inconsistency, we are taking the entire process down.
+[rank6]:[E1129 11:29:02.188788043 ProcessGroupNCCL.cpp:1834] [PG ID 0 PG GUID 0(default_pg) Rank 6] Timeout at NCCL work: 45302, last enqueued NCCL work: 45304, last completed NCCL work: 45301.
+[rank6]:[E1129 11:29:02.188826948 ProcessGroupNCCL.cpp:630] [Rank 6] Some NCCL operations have failed or timed out. Due to the asynchronous nature of CUDA kernels, subsequent GPU operations might run on corrupted/incomplete data.
+[rank6]:[E1129 11:29:02.188838843 ProcessGroupNCCL.cpp:636] [Rank 6] To avoid data inconsistency, we are taking the entire process down.
+[rank2]:[E1129 11:29:02.188850058 ProcessGroupNCCL.cpp:1595] [PG ID 0 PG GUID 0(default_pg) Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x71f2be96c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x71f273bcc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x71f273bd3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x71f273bd561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x71f2bf3205c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x71f2c3094ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x71f2c3126850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 2] Process group watchdog thread terminated with exception: [Rank 2] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600016 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x71f2be96c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x71f273bcc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x71f273bd3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x71f273bd561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x71f2bf3205c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x71f2c3094ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x71f2c3126850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1601 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x71f2be96c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe4271b (0x71f27384271b in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x145c0 (0x71f2bf3205c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #3: <unknown function> + 0x94ac3 (0x71f2c3094ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126850 (0x71f2c3126850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+[rank6]:[E1129 11:29:02.190295351 ProcessGroupNCCL.cpp:1595] [PG ID 0 PG GUID 0(default_pg) Rank 6] Process group watchdog thread terminated with exception: [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600067 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x70726676c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x70721b9cc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x70721b9d3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x70721b9d561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x707266da65c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x70726ac94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x70726ad26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+terminate called after throwing an instance of 'c10::DistBackendError'
+  what():  [PG ID 0 PG GUID 0(default_pg) Rank 6] Process group watchdog thread terminated with exception: [Rank 6] Watchdog caught collective operation timeout: WorkNCCL(SeqNum=45302, OpType=ALLGATHER, NumelIn=1474560, NumelOut=11796480, Timeout(ms)=600000) ran for 600067 milliseconds before timing out.
+Exception raised from checkTimeout at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:618 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x70726676c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10d::ProcessGroupNCCL::WorkNCCL::checkTimeout(std::optional<std::chrono::duration<long, std::ratio<1l, 1000l> > >) + 0x282 (0x70721b9cc772 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: c10d::ProcessGroupNCCL::watchdogHandler() + 0x233 (0x70721b9d3bb3 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: c10d::ProcessGroupNCCL::ncclCommWatchdog() + 0x14d (0x70721b9d561d in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #4: <unknown function> + 0x145c0 (0x707266da65c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #5: <unknown function> + 0x94ac3 (0x70726ac94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #6: <unknown function> + 0x126850 (0x70726ad26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+Exception raised from ncclCommWatchdog at ../torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp:1601 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x96 (0x70726676c446 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0xe4271b (0x70721b64271b in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #2: <unknown function> + 0x145c0 (0x707266da65c0 in /home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/lib/libtorch.so)
+frame #3: <unknown function> + 0x94ac3 (0x70726ac94ac3 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #4: <unknown function> + 0x126850 (0x70726ad26850 in /lib/x86_64-linux-gnu/libc.so.6)
+
+W1129 11:29:02.613000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50712 closing signal SIGTERM
+W1129 11:29:02.614000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50713 closing signal SIGTERM
+W1129 11:29:02.614000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50714 closing signal SIGTERM
+W1129 11:29:02.615000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50715 closing signal SIGTERM
+W1129 11:29:02.615000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50716 closing signal SIGTERM
+W1129 11:29:02.616000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50717 closing signal SIGTERM
+W1129 11:29:02.616000 50634 torch/distributed/elastic/multiprocessing/api.py:897] Sending process 50718 closing signal SIGTERM
+E1129 11:29:15.315000 50634 torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -6) local_rank: 7 (pid: 50719) of binary: /home/ubuntu/geof/env_geo/bin/python3.11
+Traceback (most recent call last):
+  File "/home/ubuntu/geof/env_geo/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/geof/env_geo/lib/python3.11/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+======================================================
+open_clip_train.main FAILED
+------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2024-11-29_11:29:02
+  host      : ip-172-31-11-31.ec2.internal
+  rank      : 7 (local_rank: 7)
+  exitcode  : -6 (pid: 50719)
+  error_file: <N/A>
+  traceback : Signal 6 (SIGABRT) received by PID 50719
+======================================================

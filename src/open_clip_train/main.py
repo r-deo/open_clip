@@ -36,6 +36,7 @@ from open_clip_train.params import parse_args
 from open_clip_train.scheduler import cosine_lr, const_lr, const_lr_cooldown
 from open_clip_train.train import train_one_epoch, evaluate
 from open_clip_train.file_utils import pt_load, check_exists, start_sync_process, remote_sync
+from open_clip_train.new_evaluate import EvalAll
 
 
 LATEST_CHECKPOINT_NAME = "epoch_latest.pt"
@@ -504,6 +505,10 @@ def main(args):
                     checkpoint_dict,
                     os.path.join(args.checkpoint_path, f"epoch_{completed_epoch}.pt"),
                 )
+                ea = EvalAll(os.path.join(args.checkpoint_path, f"epoch_{completed_epoch}.pt"))
+                metrics = ea.evaluate()
+                logging.info(f"Eval Mtrics: {metrics}")
+                
             if args.delete_previous_checkpoint:
                 previous_checkpoint = os.path.join(args.checkpoint_path, f"epoch_{completed_epoch - 1}.pt")
                 if os.path.exists(previous_checkpoint):

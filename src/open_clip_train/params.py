@@ -110,7 +110,7 @@ def parse_args(args):
     parser.add_argument(
         "--logs",
         type=str,
-        default="./logs/",
+        default="/data/logs/",
         help="Where to store tensorboard logs. Use None to avoid storing logs.",
     )
     parser.add_argument(
